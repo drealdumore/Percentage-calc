@@ -19,7 +19,6 @@ type ParticipantInputProps = {
 
 type ResultItemProps = {
   index: number;
-  percentage: number;
   amount: number;
 };
 
@@ -97,7 +96,7 @@ const ParticipantInput = memo(
 );
 ParticipantInput.displayName = "ParticipantInput";
 
-const ResultItem = memo(({ index, percentage, amount }: ResultItemProps) => (
+const ResultItem = memo(({ index, amount }: ResultItemProps) => (
   <div className="flex items-center justify-between">
     <span className="text-sm font-medium">Participant {index + 1}</span>
     <NumberFlowGroup>
@@ -231,7 +230,6 @@ export default function PercentageCalculator() {
             <ResultItem
               key={index}
               index={index}
-              percentage={calc.percentage}
               amount={calc.amount}
             />
           ))}
