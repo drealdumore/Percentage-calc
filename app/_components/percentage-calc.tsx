@@ -87,7 +87,7 @@ const ParticipantInput = memo(
         <button
           onClick={onRemove}
           aria-label="Remove participant"
-          className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-neutral-500 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-neutral-300 h-10 w-10 mt-6 bg-gradient-to-t from-neutral-500 to-neutral-400 shadow-inner shadow-neutral-400 ring-2 hover:opacity-90 active:scale-[0.99] ring-neutral-500 hover:bg-neutral-600 text-white"
+          className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-neutral-500 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-neutral-300 h-10 w-10 mt-6 bg-gradient-to-t from-neutral-500 to-neutral-400 shadow-inner shadow-neutral-400 ring-2 hover:opacity-90 active:scale-[0.99] hover:bg-neutral-600 text-white"
         >
           <Minus />
         </button>
@@ -111,16 +111,6 @@ const ResultItem = memo(({ index, percentage, amount }: ResultItemProps) => (
           className=""
         />{" "}
         Each
-        {/* <NumberFlow
-          value={percentage}
-          format={{
-            style: "percent",
-            maximumFractionDigits: 2,
-          }}
-          className={`text-sm ${
-            Number(percentage) < 0 ? "text-red-400" : "text-green-400"
-          }`}
-        /> */}
       </div>
     </NumberFlowGroup>
   </div>
@@ -186,7 +176,7 @@ export default function PercentageCalculator() {
             Percentage Calculator
           </h3>
         </div>
-        <div className="space-y-6 p-6 pt-0 space-y-6">
+        <div className="p-6 pt-0 space-y-6">
           <div className="space-y-2">
             <label className="text-sm font-medium" htmlFor="total-amount">
               Total Amount
@@ -221,7 +211,7 @@ export default function PercentageCalculator() {
 
           <button
             onClick={addParticipant}
-            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-neutral-500 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-neutral-300 h-10 px-4 py-2 w-full bg-gradient-to-t from-neutral-500 to-neutral-400 shadow-inner shadow-neutral-400 ring-2 hover:opacity-90 active:scale-[0.99] ring-neutral-500 hover:bg-neutral-600 text-white"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-neutral-300 h-10 px-4 py-2 w-full bg-gradient-to-t from-neutral-500 to-neutral-400 shadow-inner shadow-neutral-400 ring-2 hover:opacity-90 active:scale-[0.99] ring-neutral-500 hover:bg-neutral-600 text-white"
           >
             <Plus />
             Add Participant
@@ -236,7 +226,7 @@ export default function PercentageCalculator() {
           </h3>
         </div>
 
-        <div className="space-y-4 p-6 pt-0 space-y-4">
+        <div className="p-6 pt-0 space-y-4">
           {calculations.map((calc, index) => (
             <ResultItem
               key={index}
